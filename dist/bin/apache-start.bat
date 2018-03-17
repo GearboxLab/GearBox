@@ -1,0 +1,25 @@
+@ECHO OFF
+SET HTTPD_VERSION=httpd-2.4.32-Win64-VC15
+
+ECHO Apache 2 is starting ...
+
+FOR %%X IN ("%CD%") DO SET GEARBOX_ROOT_DIR=%%~dpX
+SET GEARBOX_ROOT=%GEARBOX_ROOT_DIR:\=/%
+
+SET SERVER_ROOT=%GEARBOX_ROOT%/opt/%HTTPD_VERSION%
+SET CONF_ROOT=%GEARBOX_ROOT%/etc/%HTTPD_VERSION%
+SET LOG_ROOT=%GEARBOX_ROOT%/var/log/httpd
+SET DEFAULT_DOCUMENT_ROOT=%GEARBOX_ROOT%/var/www
+
+"%GEARBOX_ROOT_DIR%opt\%HTTPD_VERSION%\bin\httpd.exe" -f "%GEARBOX_ROOT_DIR%opt\gearbox\httpd.conf"
+
+IF ERRORLEVEL 255 GOTO finish
+IF ERRORLEVEL 1 GOTO error
+GOTO finish
+
+:error
+ECHO.
+ECHO Apache could not be started
+PAUSE
+
+:finish
