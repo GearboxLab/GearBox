@@ -3,6 +3,8 @@ SET HTTPD_VERSION=httpd-2.4.32-Win64-VC15
 
 ECHO Apache 2 is starting ...
 
+CD %~dp0
+
 FOR %%X IN ("%CD%") DO SET GEARBOX_ROOT_DIR=%%~dpX
 SET GEARBOX_ROOT=%GEARBOX_ROOT_DIR:\=/%
 

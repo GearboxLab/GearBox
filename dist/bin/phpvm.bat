@@ -1,5 +1,7 @@
 @ECHO OFF
 
+CD %~dp0
+
 IF "%1" == "use" IF "%2" == "php56" GOTO php56
 IF "%1" == "use" IF "%2" == "php71" GOTO php71
 GOTO error
