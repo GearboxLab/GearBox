@@ -9,24 +9,44 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GearBoxCLI", "GearBoxCLI\Ge
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GearBox", "GearBox\GearBox.csproj", "{FEFBB67C-DDC6-4ED1-AA49-0949A739C248}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "GearBoxSetup", "GearBoxSetup\GearBoxSetup.vdproj", "{A6DCDD2B-90B2-41BD-8F4F-CE5203DABEEC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
 		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{04F57C91-3045-45C1-AD26-A981E05FFBEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{04F57C91-3045-45C1-AD26-A981E05FFBEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04F57C91-3045-45C1-AD26-A981E05FFBEE}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{04F57C91-3045-45C1-AD26-A981E05FFBEE}.Debug|x86.Build.0 = Debug|Any CPU
 		{04F57C91-3045-45C1-AD26-A981E05FFBEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{04F57C91-3045-45C1-AD26-A981E05FFBEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04F57C91-3045-45C1-AD26-A981E05FFBEE}.Release|x86.ActiveCfg = Release|Any CPU
+		{04F57C91-3045-45C1-AD26-A981E05FFBEE}.Release|x86.Build.0 = Release|Any CPU
 		{54D662AD-7308-45C0-A449-6D653A9A622E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{54D662AD-7308-45C0-A449-6D653A9A622E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54D662AD-7308-45C0-A449-6D653A9A622E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{54D662AD-7308-45C0-A449-6D653A9A622E}.Debug|x86.Build.0 = Debug|Any CPU
 		{54D662AD-7308-45C0-A449-6D653A9A622E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{54D662AD-7308-45C0-A449-6D653A9A622E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54D662AD-7308-45C0-A449-6D653A9A622E}.Release|x86.ActiveCfg = Release|Any CPU
+		{54D662AD-7308-45C0-A449-6D653A9A622E}.Release|x86.Build.0 = Release|Any CPU
 		{FEFBB67C-DDC6-4ED1-AA49-0949A739C248}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{FEFBB67C-DDC6-4ED1-AA49-0949A739C248}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEFBB67C-DDC6-4ED1-AA49-0949A739C248}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{FEFBB67C-DDC6-4ED1-AA49-0949A739C248}.Debug|x86.Build.0 = Debug|Any CPU
 		{FEFBB67C-DDC6-4ED1-AA49-0949A739C248}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FEFBB67C-DDC6-4ED1-AA49-0949A739C248}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FEFBB67C-DDC6-4ED1-AA49-0949A739C248}.Release|x86.ActiveCfg = Release|Any CPU
+		{FEFBB67C-DDC6-4ED1-AA49-0949A739C248}.Release|x86.Build.0 = Release|Any CPU
+		{A6DCDD2B-90B2-41BD-8F4F-CE5203DABEEC}.Debug|Any CPU.ActiveCfg = Debug
+		{A6DCDD2B-90B2-41BD-8F4F-CE5203DABEEC}.Debug|x86.ActiveCfg = Debug
+		{A6DCDD2B-90B2-41BD-8F4F-CE5203DABEEC}.Release|Any CPU.ActiveCfg = Release
+		{A6DCDD2B-90B2-41BD-8F4F-CE5203DABEEC}.Release|x86.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
