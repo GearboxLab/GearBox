@@ -92,7 +92,13 @@ namespace GearBox
 
         private string GetGearBoxRoot()
         {
+#if DEBUG
             return Directory.GetCurrentDirectory();
+#else
+            string path = AppDomain.CurrentDomain.BaseDirectory;
+
+            return path.Substring(0, path.Length - 1);
+#endif
         }
 
         private string GetHttpdServerRoot()
