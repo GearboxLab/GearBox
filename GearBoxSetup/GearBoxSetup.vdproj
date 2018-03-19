@@ -220,11 +220,6 @@
             "AssemblyAsmDisplayName" = "8:GearBox, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_4CE45897430ABD8626A233D71B8F4C54"
-                    {
-                    "Name" = "8:GearBox.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:GearBox.dll"
             "TargetName" = "8:"
@@ -550,15 +545,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:GearBox"
-        "ProductCode" = "8:{BC3123FB-ADA8-4D98-940D-D38623ADE913}"
-        "PackageCode" = "8:{8FFD595E-9B9B-4D1D-BE1A-7B688E89C59F}"
+        "ProductCode" = "8:{C2FEF798-31B6-43D5-BC4D-AA300924FC5C}"
+        "PackageCode" = "8:{CF486C64-B5B4-4EB0-9C99-53DC129B79D8}"
         "UpgradeCode" = "8:{E1743844-E279-4E8E-9683-3F9B4124CA77}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:FALSE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.0.5"
+        "ProductVersion" = "8:1.0.6"
         "Manufacturer" = "8:GearBox"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
