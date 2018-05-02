@@ -2,8 +2,9 @@
 
 SET CURRENT_DIRECTRY=%~dp0
 FOR %%X IN ("%CURRENT_DIRECTRY%.") DO SET GEARBOX_ROOT=%%~dpX
+SET GEARBOX_ROOT=%GEARBOX_ROOT:~0,-1%
 
-SET NSSM=%GEARBOX_ROOT%bin\nssm.exe
+SET NSSM=%GEARBOX_ROOT%\bin\nssm.exe
 
 IF NOT -%1-==-- IF NOT -%2-==-- GOTO command
 GOTO usage
@@ -26,7 +27,7 @@ IF -%4-==-- GOTO usage
 
 net stop %SERVICE_NAME%
 "%NSSM%" remove "%SERVICE_NAME%" confirm
-"%NSSM%" install "%SERVICE_NAME%" "%GEARBOX_ROOT%bin\%~3-cgi.bat" "-b %~4"
+"%NSSM%" install "%SERVICE_NAME%" "%GEARBOX_ROOT%\bin\%~3-cgi.bat" "-b %~4"
 
 ECHO.
 GOTO end
