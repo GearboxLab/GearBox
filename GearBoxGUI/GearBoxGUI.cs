@@ -9,11 +9,10 @@ namespace GearBox
 {
     public partial class GearBoxGUI : Form
     {
-        private static bool _isFormOpened = false;
-
         private Config.Config _config;
         private Service.ApacheService _apacheService;
         private Service.MemcachedService _memcachedService;
+        private bool isRunAtWindowsStart = false;
 
         public const string SERVICE_APACHE = "Apache";
         public const string SERVICE_NGINX = "Nginx";
@@ -30,7 +29,7 @@ namespace GearBox
                     Thread.Sleep(1000);
                 }
 
-                Close();
+                isRunAtWindowsStart = true;
             }
         }
 
@@ -52,27 +51,21 @@ namespace GearBox
 
         private void GearBoxGUI_Load(object sender, EventArgs e)
         {
-            if (!_isFormOpened)
-            {
-                _isFormOpened = true;
-            }
-            else
-            {
-                Dispose();
-            }
-
             checkBoxStartup.Checked = File.Exists(StartupLinkPath());
 
             timer1.Start();
         }
 
+        private void GearBoxGUI_Shown(object sender, EventArgs e)
+        {
+            if (isRunAtWindowsStart)
+            {
+                Hide();
+            }
+        }
+
         private void GearBoxGUI_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (_isFormOpened)
-            {
-                _isFormOpened = false;
-            }
-
             e.Cancel = true;
             Hide();
         }
