@@ -176,10 +176,13 @@ namespace GearBox
         private string GetGearBoxRoot()
         {
 #if DEBUG
-            return Directory.GetCurrentDirectory();
+            string root = Directory.GetCurrentDirectory();
 #else
-            return Directory.GetParent(Process.GetCurrentProcess().MainModule.FileName).ToString();
+            string root = Directory.GetParent(Process.GetCurrentProcess().MainModule.FileName).ToString();
 #endif
+            char[] charsToTrim = { '\\', ' ' };
+
+            return root.TrimEnd(charsToTrim);
         }
     }
 }
