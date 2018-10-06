@@ -34,12 +34,12 @@
             this.buttonStop = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.startToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.stopToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.checkBoxStartup = new System.Windows.Forms.CheckBox();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
-            this.stopToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -75,14 +75,33 @@
             this.toolStripMenuItem1,
             this.exitToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(153, 98);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(99, 76);
             // 
             // startToolStripMenuItem
             // 
             this.startToolStripMenuItem.Name = "startToolStripMenuItem";
-            this.startToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.startToolStripMenuItem.Size = new System.Drawing.Size(98, 22);
             this.startToolStripMenuItem.Text = "Start";
             this.startToolStripMenuItem.Click += new System.EventHandler(this.startToolStripMenuItem_Click);
+            // 
+            // stopToolStripMenuItem
+            // 
+            this.stopToolStripMenuItem.Name = "stopToolStripMenuItem";
+            this.stopToolStripMenuItem.Size = new System.Drawing.Size(98, 22);
+            this.stopToolStripMenuItem.Text = "Stop";
+            this.stopToolStripMenuItem.Click += new System.EventHandler(this.stopToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(95, 6);
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(98, 22);
+            this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // timer1
             // 
@@ -108,25 +127,6 @@
             this.notifyIcon1.Visible = true;
             this.notifyIcon1.DoubleClick += new System.EventHandler(this.notifyIcon1_DoubleClick);
             // 
-            // stopToolStripMenuItem
-            // 
-            this.stopToolStripMenuItem.Name = "stopToolStripMenuItem";
-            this.stopToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.stopToolStripMenuItem.Text = "Stop";
-            this.stopToolStripMenuItem.Click += new System.EventHandler(this.stopToolStripMenuItem_Click);
-            // 
-            // exitToolStripMenuItem
-            // 
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.exitToolStripMenuItem.Text = "Exit";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(149, 6);
-            // 
             // GearBoxGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -138,11 +138,13 @@
             this.Controls.Add(this.buttonStart);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(600, 600);
+            this.MaximumSize = new System.Drawing.Size(250, 120);
+            this.MinimumSize = new System.Drawing.Size(250, 120);
             this.Name = "GearBoxGUI";
             this.Text = "GearBox";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.GearBoxGUI_FormClosing);
             this.Load += new System.EventHandler(this.GearBoxGUI_Load);
+            this.Shown += new System.EventHandler(this.GearBoxGUI_Shown);
             this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
