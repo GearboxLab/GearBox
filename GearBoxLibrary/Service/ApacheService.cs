@@ -30,14 +30,28 @@ namespace GearBox.Service
 
         public override void Start()
         {
-            ModifyDefaultConf();
-
             Spawn(new ThreadStart(DoStart));
         }
 
         public override void Stop()
         {
             Spawn(new ThreadStart(DoStop));
+        }
+
+        public void InitializeFileSystem()
+        {
+            string defaultConfFilePath = _binDirectory + "\\conf\\httpd.conf";
+            string contents = File.ReadAllText(defaultConfFilePath);
+            string modifiedContents = contents
+                .Replace("Define SRVROOT \"c:/Apache24\"", "Define SRVROOT \"${APACHE_ROOT}\"")
+                .Replace("${SRVROOT}/htdocs", "${WEB_ROOT}");
+
+            File.WriteAllText(defaultConfFilePath, modifiedContents);
+
+            if (!Directory.Exists(_logDirectory))
+            {
+                Directory.CreateDirectory(_logDirectory);
+            }
         }
 
         private void DoStart()
@@ -89,17 +103,6 @@ namespace GearBox.Service
             catch
             {
             }
-        }
-
-        private void ModifyDefaultConf()
-        {
-            string defaultConfFilePath = _binDirectory + "\\conf\\httpd.conf";
-            string contents = File.ReadAllText(defaultConfFilePath);
-            string modifiedContents = contents
-                .Replace("Define SRVROOT \"c:/Apache24\"", "Define SRVROOT \"${APACHE_ROOT}\"")
-                .Replace("${SRVROOT}/htdocs", "${WEB_ROOT}");
-
-            File.WriteAllText(defaultConfFilePath, modifiedContents);
         }
     }
 }

@@ -46,6 +46,8 @@ namespace GearBox
             _config = Config.Config.Load(configFilePath);
             _apacheService = new Service.ApacheService(gearboxRoot, _config.Apache);
             _memcachedService = new Service.MemcachedService(gearboxRoot, _config.Memcached);
+
+            _apacheService.InitializeFileSystem();
         }
 
         private void GearBoxGUI_Load(object sender, EventArgs e)
