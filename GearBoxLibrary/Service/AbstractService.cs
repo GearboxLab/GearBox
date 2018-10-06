@@ -87,9 +87,15 @@ namespace GearBox.Service
             {
                 if (File.Exists(pidFilePath))
                 {
-                    pidText = File.ReadAllText(pidFilePath).Trim();
+                    try
+                    {
+                        pidText = File.ReadAllText(pidFilePath).Trim();
 
-                    break;
+                        break;
+                    }
+                    catch
+                    {
+                    }
                 }
 
                 Thread.Sleep(1000);
